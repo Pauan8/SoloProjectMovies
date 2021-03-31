@@ -17,14 +17,17 @@ const MovieDisplay = () => {
       .catch((error) => console.log(error));
   }, [id]);
 
+  const onLoad = () => {
+    if (movie.success === false) {
+      return (window.location.href = "/fail");
+    }
+    return <MovieDetails {...movie} key={movie.id} />;
+  };
+
   return (
     <article className="movie-details">
       <BackLink />
-      {movie.length === 0 ? (
-        <LoadingSymbol />
-      ) : (
-        <MovieDetails {...movie} key={movie.id} />
-      )}
+      {movie.length === 0 ? <LoadingSymbol /> : onLoad()}
     </article>
   );
 };
