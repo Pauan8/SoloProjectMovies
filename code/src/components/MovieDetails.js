@@ -13,18 +13,18 @@ const MovieDetails = (props) => {
     <div className="movie-details-wrapper">
       <picture className="movie-details__background">
         <source
-          srcSet={`http://image.tmdb.org/t/p/original${backdrop_path}`}
+          srcSet={`https://image.tmdb.org/t/p/original${backdrop_path}`}
           media="(min-width: 1024px)"
         />
         <img
-          src={`http://image.tmdb.org/t/p/w1280${backdrop_path}`}
+          src={`https://image.tmdb.org/t/p/w1280${backdrop_path}`}
           alt={original_title}
         />
       </picture>
       <div className="movie-details-info">
         <div className="movie-details-info__image-container">
           <img
-            src={`http://image.tmdb.org/t/p/w342${poster_path}`}
+            src={`https://image.tmdb.org/t/p/w342${poster_path}`}
             alt={original_title}
           ></img>
         </div>
