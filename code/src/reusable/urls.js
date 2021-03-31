@@ -1,0 +1,2 @@
+export const POPULAR_URL = "https://api.themoviedb.org/3/movie/popular?api_key=9e2d991bdc86d11d2a7e1e110ef63aac&language=en-US&page=1";
+export const MOVIE_URL = (id) => { return `https://api.themoviedb.org/3/movie/${id}?api_key=9e2d991bdc86d11d2a7e1e110ef63aac&language=en-US`}
